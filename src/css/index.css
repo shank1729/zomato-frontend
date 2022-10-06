@@ -1,0 +1,225 @@
+
+@font-face {
+  font-family: poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+* {
+
+  margin: 0;
+  font-family: Poppins;
+}
+
+.main-section {
+
+  height: 70vh;
+  background-image: linear-gradient(to bottom, rgba(157, 14, 14, 0), #4f0707),
+      url("./bg-image/main-imge.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fontb {
+  color: #192F60;
+
+}
+
+.fontg {
+  color: #636F88;
+
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  color: #EB2929;
+}
+
+.logo p {
+  font-size: 55px;
+}
+
+.loc {
+
+  padding: 0.75rem;
+}
+
+.location-result {
+  width: 100%;
+  /* display: none; */
+  z-index: 1;
+}
+.search-width{
+  width:40vw;
+}
+.search-item {
+  border: 1px solid rgb(192, 189, 189)
+}
+
+.search-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+
+}
+
+.search-result {
+
+  width: 100%;
+  z-index: 1;
+
+}
+
+.search-loc {
+  z-index: 2;
+}
+
+/* .search:hover .search-result {
+  display: block;
+}
+
+.search-loc:hover .location-result {
+  display: block;
+} */
+
+.box {
+  height: 160px;
+  width: 360px;
+  box-shadow: 0px 3px 6px #00000029;
+  cursor: pointer;
+}
+
+.food-image {
+  width: 160px;
+  height: 160px;
+
+}
+
+@media only screen and (max-width:768px) {
+  .login-signup-row button {
+      display: none;
+  }
+  .main-section{
+    height:80vh;
+  }
+  
+  .location-result {
+      
+      position: absolute;
+      top: 60%;
+      width: 84%;
+      cursor: pointer;
+
+  }
+
+ 
+  .search-box {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .search-result .location-result  {
+      width: 100%;
+  }
+
+  .search-width{
+      width: 100%;
+  }
+
+
+}
+/* search page start */
+.brand {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.food-shadow {
+  box-shadow: 0 0 5px 0px gray;
+  cursor:pointer;
+}
+.food-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 25px;
+}
+
+.pages {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.pages li {
+  border: 1px solid gray;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  color: gray;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pages .active {
+  border: 1px solid white;
+  color: white;
+  background-color: gray;
+}
+
+/* search page end */
+
+/********** bootstrap-restaurant-page*/
+.restaurant-main-image {
+  height: 70vh;
+  overflow: hidden;
+}
+.restaurant-main-image img {
+  height: 150%;
+  width: 100%;
+}
+.btn-gallery {
+  top: 85%;
+  right: 5%;
+  background-color: rgba(245, 222, 179, 0.411);
+  color: black;
+  font-weight: bold;
+}
+
+/* menu item  */
+.menu-food-item {
+  width: 90px;
+  height: 90px;
+  background-color: #192f60;
+  position: relative;
+}
+.menu-food-item .add {
+  position: absolute;
+  left: 25%;
+  bottom: -20%;
+}
+.menu-food-item img {
+  width: 100%;
+  height: 100%;
+}
+.menu-food-item .order-item-count {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -20%;
+}
+.menu-food-item .order-item-count span {
+  background-color: white;
+  padding: 2px 5px;
+  border: 2px solid gray;
+  margin: 0 2px;
+}
