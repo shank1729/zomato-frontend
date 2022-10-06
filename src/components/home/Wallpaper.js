@@ -18,7 +18,7 @@ function Wallpaper(props) {
             setLoclist([]);
             return false;
         }
-        let URL = "http://localhost:4000/api/get-location-by-city?city=" + city;
+        let URL = "https://murmuring-plains-68361.herokuapp.com/api/get-location-by-city?city=" + city;
         try {
             let response = await axios.get(URL);
             let { location } = response.data;
@@ -45,7 +45,7 @@ function Wallpaper(props) {
             setRestaurantList([]);
             return false;
         }
-        let URL = `http://localhost:4000/api/get-restaurant-by-location-id?lid=${selectLoc.location_id}&rest=${restaurant}`;
+        let URL = `https://murmuring-plains-68361.herokuapp.com/api/get-restaurant-by-location-id?lid=${selectLoc.location_id}&rest=${restaurant}`;
         try {
             let response = await axios.get(URL);
             let { result } = response.data;

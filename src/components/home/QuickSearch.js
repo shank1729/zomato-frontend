@@ -5,7 +5,7 @@ import axios from "axios";
 function QuickSearch() {
     let [mealType, setMealType] = useState([])
     let getQuickSearchData = async () => {
-        let URL = 'http://localhost:4000/api/get-meal-types';
+        let URL = 'https://murmuring-plains-68361.herokuapp.com/api/get-meal-types';
 
 
         try {
