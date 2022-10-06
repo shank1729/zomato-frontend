@@ -57,7 +57,7 @@ export default function Header(props) {
         else {
             setUserLogin(null);
         }
-    })
+    },[])
     return (
         <>
             <GoogleOAuthProvider clientId="340222297158-9qrhavu38qvfjal186n9elqubmmpk29f.apps.googleusercontent.com">

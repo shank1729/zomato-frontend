@@ -24,7 +24,7 @@ function QuickSearch() {
     };
     useEffect(() => {
         getQuickSearchData();
-    })
+    },[])
 
     return (
         <>
