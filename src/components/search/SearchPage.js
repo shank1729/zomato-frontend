@@ -42,7 +42,7 @@ function SearchPage() {
 
   let getFilterDetails = async (_filter) => {
     _filter = { ..._filter };
-    let URL = "https://murmuring-plains-68361.herokuapp.com/api/filter";
+    let URL = process.env.REACT_APP_API_URL+'filter';
 
     if (searchParams.get("meal_type"))
       _filter["mealtype"] = searchParams.get("meal_type");
@@ -58,7 +58,7 @@ function SearchPage() {
     }
   }
   let getLocationList = async () => {
-    let URL = "https://murmuring-plains-68361.herokuapp.com/api/get-location";
+    let URL = process.env.REACT_APP_API_URL+'get-location';
     try {
       let response = await axios.get(URL);
       let data = response.data;

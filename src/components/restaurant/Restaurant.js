@@ -53,7 +53,7 @@ function Restaurant(props) {
       return false;
     }
 
-    let URL = "https://murmuring-plains-68361.herokuapp.com/api/payment";
+    let URL = process.env.REACT_APP_API_URL+'payment';
 
     let sendData = {
       amount: subTotal,
@@ -73,7 +73,7 @@ function Restaurant(props) {
         "https://upload.wikimedia.org/wikipedia/commons/2/2d/Zomato_Logo.jpg",
       order_id: order.id,
       handler: async function (response) {
-        let URL = "https://murmuring-plains-68361.herokuapp.com/api/callback";
+        let URL = process.env.REACT_APP_API_URL+'callback';
         let sendData = {
           payment_id: response.razorpay_payment_id,
           order_id: response.razorpay_order_id,
@@ -102,7 +102,7 @@ function Restaurant(props) {
     console.log("hello");
   };
   let getRestaurantDetails = async () => {
-    let URL = "https://murmuring-plains-68361.herokuapp.com/api/get-restaurant-by-id/" + params.id;
+    let URL = process.env.REACT_APP_API_URL+'get-restaurant-by-id/' + params.id;
     try {
       let response = await axios.get(URL);
       let data = response.data;
@@ -117,7 +117,7 @@ function Restaurant(props) {
     }
   };
   let getMenuList = async () => {
-    let URL = "https://murmuring-plains-68361.herokuapp.com/api/get-menu-item?rid=" + params.id;
+    let URL = process.env.REACT_APP_API_URL+'get-menu-item?rid=' + params.id;
     try {
       let response = await axios.get(URL);
       let data = response.data;
