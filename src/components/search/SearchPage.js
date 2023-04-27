@@ -42,7 +42,7 @@ function SearchPage() {
 
   let getFilterDetails = async (_filter) => {
     _filter = { ..._filter };
-    let URL = process.env.REACT_APP_API_URL+'filter';
+    let URL = process.env.REACT_APP_API_URL+'/filter';
 
     if (searchParams.get("meal_type"))
       _filter["mealtype"] = searchParams.get("meal_type");
@@ -58,7 +58,7 @@ function SearchPage() {
     }
   }
   let getLocationList = async () => {
-    let URL = process.env.REACT_APP_API_URL+'get-location';
+    let URL = process.env.REACT_APP_API_URL+'/get-location';
     try {
       let response = await axios.get(URL);
       let data = response.data;

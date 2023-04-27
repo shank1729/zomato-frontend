@@ -102,7 +102,7 @@ function Restaurant(props) {
     console.log("hello");
   };
   let getRestaurantDetails = async () => {
-    let URL = process.env.REACT_APP_API_URL+'get-restaurant-by-id/' + params.id;
+    let URL = process.env.REACT_APP_API_URL+'/get-restaurant-by-id/' + params.id;
     try {
       let response = await axios.get(URL);
       let data = response.data;
@@ -117,7 +117,7 @@ function Restaurant(props) {
     }
   };
   let getMenuList = async () => {
-    let URL = process.env.REACT_APP_API_URL+'get-menu-item?rid=' + params.id;
+    let URL = process.env.REACT_APP_API_URL+'/get-menu-item?rid=' + params.id;
     try {
       let response = await axios.get(URL);
       let data = response.data;

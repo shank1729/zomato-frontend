@@ -5,7 +5,7 @@ import axios from "axios";
 function QuickSearch() {
     let [mealType, setMealType] = useState([])
     let getQuickSearchData = async () => {
-        let URL = process.env.REACT_APP_API_URL+'get-meal-types';
+        let URL = process.env.REACT_APP_API_URL+'/get-meal-types';
 
 
         try {
